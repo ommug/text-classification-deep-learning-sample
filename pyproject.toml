@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "text-classification"
+version = "1.0.0"
+description = "textclassification"
+authors = [
+    "Omkar <oms.mails@gmail.com>"
+]
+
+[tool.poetry.dependencies]
+python = "3.10.*"
+toml = "0.10.1"
+
+[tool.poetry.dev-dependencies]
+typer = "^0.9.0"
+progress = "^1.5"
+matplotlib = "^3.8.0"	
+tqdm = "^4.43.0"
+requests = "^2.31.0"
+related = "^0.7.2"
+ujson = "^4.0.1"
+jsonschema = "^4.19.0"
+flask = "^2.3.0"
+Flask-WTF = "^1.1.0"
+taskipy = "^1.8.2"
+jupyterlab-server = "^2.22.0"
+jupyterlab = "~4.0.0"
+numpy = "^1.26.0"
+pandas = "^2.0.0"
+seaborn = "^0.13.0"
+SciPy = "^1.11.2"
+statistics = "^1.0.3.5"
+geopy = "^2.1.0"
+scikit-learn = "^1.3.0"
+nltk = "^3.8"
+tensorflow = "^2.10.0"
+keras = "^2.15.0"
+
+
+ 
+[tool.taskipy.tasks]
+install_toc = "jupyter labextension install @jupyterlab/toc"
+install_jupyter_kernel = "python -m ipykernel install --user --name=text-classification"
+list_jupyter_kernels = "jupyter kernelspec list"
+uninstall_jupyter_kernel = "jupyter kernelspec uninstall text-classification"
+
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
